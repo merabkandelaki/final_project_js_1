@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Crud</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="users-info">
+      <h1 class="title-application">
+        CRUD operations using JSONPlaceholder and JavaScript
+      </h1>
+      <div class="new-user">
+        <img src="./icons/user.png" alt="icon user" />
+        <h2>Create User</h2>
+      </div>
+
+      <!-- modal create user -->
+      <div class="modal-create-user">
+        <div class="modal">
+          <div class="modal-title">
+            <h4>Add New User</h4>
+            <span class="close">&times;</span>
+          </div>
+          <form class="modal-content">
+            <input type="text" placeholder="Name..." class="input-name" />
+            <input
+              type="text"
+              placeholder="Username..."
+              class="input-username"
+            />
+            <input
+              type="email"
+              placeholder="Email..."
+              class="input-email"
+              required
+            />
+            <button class="btn-create-user">Create user</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- modal edit user -->
+      <div class="modal-edit-user">
+        <div class="modal">
+          <div class="modal-title">
+            <h4>Edit User</h4>
+            <span class="close-edit">&times;</span>
+          </div>
+          <form class="modal-edit-content">
+            <input type="text" class="modal-edit-name" placeholder="Name..." />
+            <input
+              type="text"
+              class="modal-edit-username"
+              placeholder="Username..."
+            />
+            <input
+              type="email"
+              class="modal-edit-email"
+              placeholder="Email..."
+            />
+            <button class="btn-edit-user">Edit user</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="users-info-cards"></div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
