@@ -67,6 +67,10 @@ document
       top: document.body.scrollHeight,
       behavior: "smooth",
     });
+    modalNewUser.style.display = "none";
+    newUser.style.opacity = 1;
+    userList.style.opacity = 1;
+    titleApplication.style.opacity = 1;
     console.log(user);
   });
 
@@ -160,6 +164,14 @@ function editCurrentUser(id) {
       const name = nameInput.value;
       const username = userNameInput.value;
       const email = emailInput.value;
+
+      // validation email
+      const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      const isValidMail = regex.test(email);
+      if (!isValidMail) {
+        alert("Please enter correct email");
+        return false;
+      }
 
       const res = await fetch(
         `https://jsonplaceholder.typicode.com/users/${id !== 11 ? id : 10}`,
